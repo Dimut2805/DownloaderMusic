@@ -1,0 +1,12 @@
+<hibernate-mapping>
+    <class name="ru.uds.musicproject.test.Person" table="test">
+        <id name="id">
+            <generator class="assigned"/>
+        </id>
+
+        <property name="name"/>
+        <property name="age"/>
+
+    </class>
+
+</hibernate-mapping>

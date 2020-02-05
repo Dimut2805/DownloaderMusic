@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.uds.musicproject.controllers.MainController"
+      spacing="10"
+      fx:id="window" id="bg">
+    <MenuBar id="bg">
+        <Menu text="Справка">
+            <MenuItem id="mi" text="О программе"/>
+        </Menu>
+    </MenuBar>
+    <FlowPane prefWidth="1300"
+              alignment="CENTER"
+              prefHeight="600">
+        <HBox spacing="10">
+            <fx:include fx:id="downloadMusic" source="/layout/DownloadMusic.fxml" />
+            <fx:include fx:id="myMusic" source="/layout/MyMusic.fxml" />
+        </HBox>
+        <fx:include fx:id="player" source="/layout/PlayerLayout.fxml" />
+    </FlowPane>
+</VBox>
