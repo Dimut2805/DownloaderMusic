@@ -8,7 +8,6 @@ import ru.uds.musicproject.model.GUI;
 public class Launcher extends Application implements Constains {
 
     public static void main(String[] args) {
-
         Application.launch(args);
     }
 

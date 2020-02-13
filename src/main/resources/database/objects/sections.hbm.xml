@@ -1,0 +1,10 @@
+<hibernate-mapping>
+    <class name="ru.uds.musicproject.model.hibernate.Sections" table="sections">
+        <id name="name">
+            <generator class="assigned"/>
+        </id>
+        <property name="url"/>
+
+    </class>
+
+</hibernate-mapping>

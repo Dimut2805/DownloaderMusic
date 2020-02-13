@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.uds.musicproject.controllers.SectionsController"
+            prefHeight="400.0" prefWidth="600.0">
+    <HBox>
+        <ScrollPane prefViewportWidth="150" prefViewportHeight="100" id="main">
+            <content>
+                <VBox fx:id="vboxContentSection"/>
+            </content>
+        </ScrollPane>
+        <VBox>
+            <Label text="Добавить раздел"/>
+            <TextField prefHeight="20" prefWidth="100" text="Название" fx:id="nameTextField"/>
+            <TextField prefHeight="20" prefWidth="100" text="url" fx:id="urlTextField"/>
+            <Button text="Добавить" onAction="#clickAddButton"/>
+        </VBox>
+    </HBox>
+</AnchorPane>

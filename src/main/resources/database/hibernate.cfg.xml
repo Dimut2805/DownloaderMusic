@@ -11,7 +11,7 @@
 
         <!-- Assume test is the database name -->
         <property name="hibernate.connection.url">
-            jdbc:postgresql://localhost/hibernate
+            jdbc:postgresql://localhost/DownloaderMusic
         </property>
         <property name="hibernate.connection.username">
             postgres
@@ -19,7 +19,7 @@
         <property name="hibernate.connection.password">
             dimik2001
         </property>
-        <mapping class="ru.uds.musicproject.test.Person"/>
-        <mapping resource="/database/objects/person.hbm.xml"/>
+        <mapping class="ru.uds.musicproject.model.hibernate.Sections"/>
+        <mapping resource="/database/objects/sections.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

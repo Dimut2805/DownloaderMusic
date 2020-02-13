@@ -1,14 +1,13 @@
 package ru.uds.musicproject.utils;
 
 import ru.uds.musicproject.constains.Constains;
-import ru.uds.musicproject.constains.ResourseObjectsConstains;
 
 import static ru.uds.musicproject.utils.DirectoryUtils.createDirectory;
 import static ru.uds.musicproject.utils.DirectoryUtils.findObjectInDir;
 import static ru.uds.musicproject.utils.DirectoryUtils.copyFile;
 
 
-public class BaseOperation implements ResourseObjectsConstains, Constains {
+public class BaseOperation implements Constains {
     /**
      * Базовые загрузки при запуске приложения
      */

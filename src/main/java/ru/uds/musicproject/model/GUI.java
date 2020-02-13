@@ -4,15 +4,16 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import ru.uds.musicproject.constains.Constains;
-import ru.uds.musicproject.constains.ResourseObjectsConstains;
+import ru.uds.musicproject.controllers.SectionsController;
 import ru.uds.musicproject.utils.BaseOperation;
 
 import java.io.IOException;
 
-public class GUI extends BaseOperation implements Constains, ResourseObjectsConstains {
+public class GUI extends BaseOperation implements Constains {
     Stage window;
 
     public GUI(Stage stage) {
@@ -57,6 +58,25 @@ public class GUI extends BaseOperation implements Constains, ResourseObjectsCons
         scene.getStylesheets().add(String.valueOf(GUI.class.getResource(SRC_CSS_BLACK_STYLE)));
         Stage window = new Stage();
         window.setTitle("Выход");
+        window.setOnCloseRequest(event -> window.close());
+        window.setScene(scene);
+        window.show();
+    }
+
+    public static void settingSectionGUI(ComboBox<String> sectionsComboBox) {
+        Parent root = null;
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(GUI.class.getResource(SRC_FXML_SECTIONS_SETTING));
+            root = fxmlLoader.load();
+            SectionsController sectionsController = fxmlLoader.getController();
+            sectionsController.setSections(sectionsComboBox);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(String.valueOf(GUI.class.getResource(SRC_CSS_BLACK_STYLE)));
+        Stage window = new Stage();
+        window.setTitle("Настройка разделов");
         window.setOnCloseRequest(event -> window.close());
         window.setScene(scene);
         window.show();
