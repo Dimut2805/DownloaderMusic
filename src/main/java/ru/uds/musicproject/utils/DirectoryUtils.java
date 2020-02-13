@@ -1,6 +1,8 @@
 package ru.uds.musicproject.utils;
 
 import ru.uds.musicproject.constains.Constains;
+import ru.uds.musicproject.constains.Dir;
+import ru.uds.musicproject.constains.Images;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Работа с директорией
  */
-public class DirectoryUtils implements Constains {
+public class DirectoryUtils implements Dir, Images {
     /**
      * Создание директории
      *

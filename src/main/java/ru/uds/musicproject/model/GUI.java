@@ -7,13 +7,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import ru.uds.musicproject.constains.CSS;
 import ru.uds.musicproject.constains.Constains;
+import ru.uds.musicproject.constains.FXML;
 import ru.uds.musicproject.controllers.SectionsController;
 import ru.uds.musicproject.utils.BaseOperation;
 
 import java.io.IOException;
 
-public class GUI extends BaseOperation implements Constains {
+public class GUI extends BaseOperation implements FXML, CSS {
     Stage window;
 
     public GUI(Stage stage) {

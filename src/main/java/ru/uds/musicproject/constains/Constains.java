@@ -3,9 +3,6 @@ package ru.uds.musicproject.constains;
 import java.util.HashMap;
 
 public interface Constains {
-    String NAME_USER = System.getProperty("user.name");
-    String PATH_MUSICS = "C:\\Users\\" + NAME_USER + "\\Music\\";
-    String PATH_IMAGE = "C:\\Users\\" + NAME_USER + "\\Pictures\\";
     HashMap<String, String> HASH_MAP_SECTIONS = new HashMap<String, String>() {
         {
             put("Не выбрано", null);

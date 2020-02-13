@@ -1,15 +1,15 @@
 package ru.uds.musicproject.model.pathmymusic;
 
 import ru.uds.musicproject.ActiveButtonsGlobalObject;
+import ru.uds.musicproject.constains.Dir;
 import ru.uds.musicproject.model.TrackObject;
 import ru.uds.musicproject.abstractclasses.ButtonAbstract;
 import ru.uds.musicproject.model.player.ButtonsModelPlayer;
 
 import java.io.File;
 
-import static ru.uds.musicproject.constains.Constains.PATH_MUSICS;
 
-class AddMusicAtPlayerButton extends ButtonAbstract {
+class AddMusicAtPlayerButton extends ButtonAbstract implements Dir {
     private TrackObject trackObject;
     private ButtonsModelPlayer buttonsModelPlayer;
     private ActiveButtonsGlobalObject activeButtonsGlobalObject;

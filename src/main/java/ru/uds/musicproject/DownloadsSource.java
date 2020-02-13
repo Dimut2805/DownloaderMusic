@@ -1,6 +1,7 @@
 package ru.uds.musicproject;
 
 import ru.uds.musicproject.constains.Constains;
+import ru.uds.musicproject.constains.Dir;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -18,7 +19,7 @@ import java.nio.channels.ReadableByteChannel;
  *         downloadImage - предназначен для скачивания картинок
  *
  */
-public class DownloadsSource implements Constains {
+public class DownloadsSource implements Dir {
     /**
      * Метод для скачивания музыки, получает ссылку на скачивание и название файла который скачивается
      *
@@ -57,7 +58,7 @@ public class DownloadsSource implements Constains {
      * @param nameImage - имя файлв
      */
     public static void downloadImage(String src, String nameImage) throws IOException {
-        String path = PATH_IMAGE + "\\DownloaderMusicPicture\\" + nameImage;
+        String path = BASE_DIR_DOWNLOADER_MUSIC_PICTURE + nameImage;
         InputStream in;
         URL connection = new URL("https://muzika.vip/"+src);
         HttpURLConnection urlConn;
@@ -80,5 +81,4 @@ public class DownloadsSource implements Constains {
             System.out.println(e);
         }
     }
-
 }

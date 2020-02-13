@@ -4,11 +4,12 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import ru.uds.musicproject.constains.Constains;
+import ru.uds.musicproject.constains.Images;
 
 import java.io.File;
 import java.net.MalformedURLException;
 
-public class MyPlayer extends TrackPlayer implements Constains {
+public class MyPlayer extends TrackPlayer implements Images {
     private MediaPlayerObject mediaPlayerObject;
 
     public MyPlayer(Label name, ImageView icon) {
