@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.uds.musicproject.controllers.setting.sections.AddController"
+            fx:id="window">
+    <VBox>
+        <TextField text="Название" fx:id="nameTextField"/>
+        <TextField text="url" fx:id="urlTextField"/>
+        <HBox>
+            <Button text="Добавить" prefWidth="120" onAction="#add"/>
+            <Button text="Отмена" prefWidth="120" onAction="#cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

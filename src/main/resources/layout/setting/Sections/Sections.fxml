@@ -3,13 +3,13 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.uds.musicproject.controllers.SectionsController"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="ru.uds.musicproject.controllers.setting.sections.SectionsController"
+>
+    <Label text="Разделы"/>
     <HBox>
         <ScrollPane prefViewportWidth="150" prefViewportHeight="100" id="main">
             <content>
@@ -17,10 +17,10 @@
             </content>
         </ScrollPane>
         <VBox>
-            <Label text="Добавить раздел"/>
-            <TextField prefHeight="20" prefWidth="100" text="Название" fx:id="nameTextField"/>
-            <TextField prefHeight="20" prefWidth="100" text="url" fx:id="urlTextField"/>
-            <Button text="Добавить" onAction="#clickAddButton"/>
+            <Button text="Добавить" prefWidth="130" onAction="#clickAddButton"/>
+            <Button text="Удалить" prefWidth="130"/>
+            <Button text="Сохранить" prefWidth="130"/>
+            <Button text="Выход" prefWidth="130"/>
         </VBox>
     </HBox>
 </AnchorPane>

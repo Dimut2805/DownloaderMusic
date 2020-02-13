@@ -8,9 +8,9 @@ import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import ru.uds.musicproject.constains.CSS;
-import ru.uds.musicproject.constains.Constains;
 import ru.uds.musicproject.constains.FXML;
-import ru.uds.musicproject.controllers.SectionsController;
+import ru.uds.musicproject.controllers.setting.sections.AddController;
+import ru.uds.musicproject.controllers.setting.sections.SectionsController;
 import ru.uds.musicproject.utils.BaseOperation;
 
 import java.io.IOException;
@@ -44,6 +44,25 @@ public class GUI extends BaseOperation implements FXML, CSS {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void addSectionInSectionSetting(ComboBox sectionsComboBox) {
+        Parent root = null;
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(GUI.class.getResource(SRC_FXML_ADD_SECTION));
+            root = fxmlLoader.load();
+            AddController addController = fxmlLoader.getController();
+            addController.setSectionsComboBox(sectionsComboBox);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(String.valueOf(GUI.class.getResource(SRC_CSS_BLACK_STYLE)));
+        Stage window = new Stage();
+        window.setTitle("Настройка разделов");
+        window.setOnCloseRequest(event -> window.close());
+        window.setScene(scene);
+        window.show();
     }
 
     /**

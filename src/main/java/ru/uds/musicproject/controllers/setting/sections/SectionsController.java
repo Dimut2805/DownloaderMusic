@@ -1,4 +1,4 @@
-package ru.uds.musicproject.controllers;
+package ru.uds.musicproject.controllers.setting.sections;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -14,6 +14,7 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import ru.uds.musicproject.model.GUI;
 import ru.uds.musicproject.model.hibernate.Sections;
 
 import java.util.List;
@@ -33,7 +34,10 @@ public class SectionsController {
 
     @FXML
     public void clickAddButton() {
-        StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("database/hibernate.cfg.xml").build();
+        GUI.addSectionInSectionSetting(sectionsComboBox);
+    }
+    /*
+    StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("database/hibernate.cfg.xml").build();
 
         Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
 
@@ -48,7 +52,7 @@ public class SectionsController {
         t.commit();
         factory.close();
         session.close();
-    }
+     */
 
     private void update(Session session) {
         if (vboxContentSection.getChildren().size() != 0) {
@@ -90,11 +94,8 @@ public class SectionsController {
         Transaction t = session.beginTransaction();
         List<Sections> list = session.createQuery("FROM Sections").list();
         for (Sections sections : list) {
-            Button button = new Button("Удалить") {{
-                setOnAction(event -> clickDelete(sections));
-            }};
             vboxContentSection.getChildren().add(new HBox(
-                    new Label(sections.getName()), button));
+                    new Label(sections.getName())));
         }
         t.commit();
         factory.close();
